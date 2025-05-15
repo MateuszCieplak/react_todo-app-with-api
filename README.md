@@ -1,50 +1,30 @@
-# React Todo App with API (complete)
+# React ToDo App
 
-It is the third part of the React Todo App with API.
+[Live Code](https://MateuszCieplak.github.io/react_todo-app-with-api/)
 
-Take your code implemented for [Add and Delete](https://github.com/mate-academy/react_todo-app-add-and-delete)
-and implement the ability to toggle and rename todos.
+![todoapp](./description/todoapp.gif)
 
-> Here is [the working example](https://mate-academy.github.io/react_todo-app-with-api/)
+The "React ToDo App" is a simple task manager that allows users to create, edit, delete, and filter tasks. The app is built using React with TypeScript, and its main purpose is to manage a list of tasks, which can be marked as completed, deleted, or edited.
 
-## Toggling a todo status
+### Key features:
 
-Toggle the `completed` status on `TodoStatus` change:
-- Install Prettier Extention and use this [VSCode settings](https://mate-academy.github.io/fe-program/tools/vscode/settings.json) to enable format on save.
-- covered the todo with a loader overlay while waiting for API response;
-- the status should be changed on success;
-- show the `Unable to update a todo` notification in case of API error.
+- **Creating tasks**: Users can add new tasks to the list.
+- **Filtering tasks**: Tasks can be filtered by status: All, Active, Completed.
+- **Task management**: Users can edit or delete tasks and toggle their completion status.
+- **State management**: React Context is used for global task management.
+- **Data persistence**: Tasks are stored in `localStorage`, meaning the task list is preserved even after refreshing the page.
+- **Interactivity**: Inline editing allows users to quickly modify task titles without refreshing the page.
 
-Add the ability to toggle the completed status of all the todos with the `toggleAll` checkbox:
+### Additional features:
 
-- `toggleAll` button should have `active` class only if all the todos are completed;
-- `toggleAll` click changes its status to the opposite one, and sets this new status to all the todos;
-- it should work the same as several individual updates of the todos which statuses were actually changed;
-- don't send requests for the todos that were not changed;
+- **Editing tasks**: Double-clicking on a task title allows inline editing without reloading the page.
+- **Clearing completed tasks**: Allows users to delete all tasks marked as completed.
+- **Keyboard support**: Task title editing can be completed using the "Enter" key or cancelled with the "Escape" key.
 
-## Renaming a todo
-
-Implement the ability to edit a todo title on double click:
-
-- show the edit form instead of the title and remove button;
-- saves changes on the form submit (just press `Enter`);
-- save changes when the field loses focus (`onBlur`);
-- if the new title is the same as the old one just cancel editing;
-- cancel editing on `Esс` key `keyup` event;
-- if the new title is empty delete the todo the same way the `x` button does it;
-- if the title was changed show the loader while waiting for the API response;
-- update the todo title on success;
-- show `Unable to update a todo` in case of API error;
-- or the deletion error message if we tried to delete the todo.
-
-## If you want to enable tests
-- open `cypress/integration/page.spec.js`
-- replace `describe.skip` with `describe` for the root `describe`
-
-> ❗❗All tests should pass, even if some behaviour is not well explained in the task❗❗
+![todoedit](./description/edittodo.gif)
 
 ## Instructions
 
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
 - Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://MateuszCieplak.github.io/react_todo-app-with-api/) and add it to the PR description.
+- Replace `<your_account>` with your Github username in the [DEMO LINK]() and add it to the PR description.
