@@ -1,30 +1,74 @@
-# React ToDo App
+# React Todo App with API
 
-[Live Code](https://MateuszCieplak.github.io/react_todo-app-with-api/)
+This project is an advanced version of the "React ToDo App", now enhanced with full API integration for managing tasks remotely. It is built using React with TypeScript and follows clean architecture practices with a focus on interactivity, usability, and real-time API synchronization.
+
+> [LIVE DEMO](https://mateuszcieplak.github.io/react_todo-app-with-api/).
 
 ![todoapp](./description/todoapp.gif)
 
-The "React ToDo App" is a simple task manager that allows users to create, edit, delete, and filter tasks. The app is built using React with TypeScript, and its main purpose is to manage a list of tasks, which can be marked as completed, deleted, or edited.
+## Tech Stack
 
-### Key features:
+- **React (with hooks)**
+- **TypeScript**
+- **CSS Modules**
+- **REST API Integration**
+- **Prettier + ESLint**
 
-- **Creating tasks**: Users can add new tasks to the list.
-- **Filtering tasks**: Tasks can be filtered by status: All, Active, Completed.
-- **Task management**: Users can edit or delete tasks and toggle their completion status.
-- **State management**: React Context is used for global task management.
-- **Data persistence**: Tasks are stored in `localStorage`, meaning the task list is preserved even after refreshing the page.
-- **Interactivity**: Inline editing allows users to quickly modify task titles without refreshing the page.
+## Features
 
-### Additional features:
+### 🧠 Core Functionality
 
-- **Editing tasks**: Double-clicking on a task title allows inline editing without reloading the page.
-- **Clearing completed tasks**: Allows users to delete all tasks marked as completed.
-- **Keyboard support**: Task title editing can be completed using the "Enter" key or cancelled with the "Escape" key.
+- **Create, edit, delete, and filter tasks**
+- **Mark tasks as completed/incomplete**
+- **Toggle all tasks' status**
+- **Persistent state via API**
+- **Inline editing with full keyboard support**
 
-![todoedit](./description/edittodo.gif)
+### 🌐 API Integration
 
-## Instructions
+- **Add/Delete Todos**
+  Based on the work from [react_todo-app-add-and-delete](https://github.com/mate-academy/react_todo-app-add-and-delete).
 
-- Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
-- Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
-- Replace `<your_account>` with your Github username in the [DEMO LINK]() and add it to the PR description.
+- **Toggle Todo Status**
+
+  - Task status changes only on successful API response
+  - Displays loading indicator while updating
+  - Error notifications for failed updates
+
+- **Rename Todo Titles**
+
+  - Double-click to enable inline editing
+  - Save changes on "Enter" key or when the input loses focus
+  - Cancel editing with "Escape" or if no changes were made
+  - Delete todo if new title is empty
+  - Show loader while waiting for API response
+  - Show appropriate error messages on failure
+
+  ![todoedit](./description/edittodo.gif)
+
+- **Toggle All Todos**
+  - Toggle all items' status at once
+  - Only send requests for items that were actually changed
+  - "Toggle All" button reflects current global status
+
+### 💡 UX Enhancements
+
+- Loading overlays on individual todos
+- Error messages for failed operations
+- Prettier formatting with VSCode settings for auto-format on save
+
+### ⚙️ State Management
+
+- Uses **React Context API** for global state
+
+---
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/MateuszCieplak/react_todo-app-with-api
+cd react_todo-app-with-api
+npm install
+npm start
+
+```
