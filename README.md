@@ -1,4 +1,4 @@
-# React Todo App with API (complete)
+# React Todo App with API
 
 It is the third part of the React Todo App with API.
 
